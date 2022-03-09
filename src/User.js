@@ -23,8 +23,10 @@ function User({ title, onCreateUser }) {
     <div>
       <h2>{title}</h2>
       Username :
-      <input type={"text"} value={username} onChange={handleChangeUsername} />
-      <button onClick={handleAddClick}>add</button>
+      <div>
+        <input type={"text"} value={username} onChange={handleChangeUsername} />
+        <button onClick={handleAddClick}>Add</button>
+      </div>
       {users.map((user) => (
         <div key={user.id}>
           <div>{user.username}</div>

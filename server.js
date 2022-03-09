@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
+const { v4 } = require("uuid");
 const { ApolloServer, gql } = require("apollo-server-express");
 
 const port = 5000;
@@ -39,7 +40,7 @@ const resolvers = {
   Mutation: {
     createUser: (parent, { username }) => {
       const newUser = {
-        id: Math.floor(Math.random() * Math.floor(10000)),
+        id: v4(),
         username,
       };
       users.push(newUser);
@@ -60,5 +61,5 @@ app.use(express.static(path.resolve("./build")));
 app.use("/", (req, res) => res.sendFile(path.resolve("./build/index.html")));
 
 app.listen(port, () => {
-  console.log(`graphql server start on ${port}`);
+  console.log(`Graphql server running on ${port}`);
 });

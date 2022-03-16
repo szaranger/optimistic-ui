@@ -51,7 +51,7 @@ const resolvers = {
 
 // Fake network lag
 app.use((req, res, next) => {
-  setTimeout(() => next(), 2000);
+  setTimeout(() => next(), 1000);
 });
 
 const server = new ApolloServer({ typeDefs, resolvers });

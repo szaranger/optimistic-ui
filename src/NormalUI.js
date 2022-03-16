@@ -3,7 +3,7 @@ import { useMutation } from "@apollo/client";
 import { CREATE_USER, GET_USERS } from "./graphql";
 import User from "./User";
 
-function WithoutOptimisticUI() {
+function NormalUI() {
   const [createUser] = useMutation(CREATE_USER);
 
   const handleCreateUser = (username) => {
@@ -16,4 +16,4 @@ function WithoutOptimisticUI() {
   return <User title="Normal UI" onCreateUser={handleCreateUser} />;
 }
 
-export default WithoutOptimisticUI;
+export default NormalUI;

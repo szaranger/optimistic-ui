@@ -1,13 +1,13 @@
 import React from "react";
 import ApolloClientProvider from "./ApolloClientProvider";
-import WithoutOptimisticUI from "./WithoutOptimistic";
-import WithOptimisticUI from "./WithOptimistic";
+import NormalUI from "./NormalUI";
+import WithOptimisticUI from "./WithOptimisticUI";
 
 function App() {
   return (
     <ApolloClientProvider>
       <main>
-        <WithoutOptimisticUI />
+        <NormalUI />
         <WithOptimisticUI />
       </main>
     </ApolloClientProvider>

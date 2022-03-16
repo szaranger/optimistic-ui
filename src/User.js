@@ -15,14 +15,14 @@ function User({ title, onCreateUser }) {
     setUsername("");
   };
 
-  if (loading || !data.users) return <>Loading...</>;
+  if (loading || !data?.users) return <>Loading...</>;
 
   const { users } = data;
 
   return (
     <div>
       <h2>{title}</h2>
-      Username :
+      Username:
       <div>
         <input type={"text"} value={username} onChange={handleChangeUsername} />
         <button onClick={handleAddClick}>Add</button>

@@ -1,6 +1,6 @@
 ## Demo Optimistic UI with React Node GraphQL
 
-[Article](https://medium.com/swlh/how-to-use-optimistic-ui-in-react-and-apollo-graphql-c53f76de360f)
+[Article](https://szaranger.medium.com/how-to-use-optimistic-ui-with-react-and-apollo-graphql-b64c4ea2fc71)
 
 
 ### Development
